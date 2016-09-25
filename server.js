@@ -11,17 +11,6 @@ var Moment=require('moment');
 var Routes=require('./routes');
 var geoip2 = require('geoip2');
 var mongoose=require('mongoose');
-var regex = /[?&]([^=#]+)=([^&#]*)/g,
-    url = 'https://stage1.delivery.com/api/merchant/logistics/book?order_id=39&last_mile_provider=tookan&estimate_id=-1',
-    params = {},
-    match;
-while(match = regex.exec(url)) {
-    params[match[1]] = match[2];
-}
-console.log(params);
-
-
-
 
 server.connection({
     host:config.SERVER.HOST,
